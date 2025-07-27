@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+
 
 export default function Home() {
   return (
@@ -35,14 +38,20 @@ export default function Home() {
               height={300}
               alt="my person"
               src="/eu.png"
-              className="w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72 rounded-full object-cover"
+              className="w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72 rounded-full object-cover object-top"
             />
-            <button
-              style={{ backgroundColor: "#6057FD" }}
-              className="text-white px-6 py-2 rounded mt-4 shadow-md hover:brightness-110 transition"
-            >
-              Meu Currículo
-            </button>
+            <a href="/curriculo/ricardo.pdf" type="application/pdf" target="_blanck">
+              <button
+                style={{ backgroundColor: "#6057FD" }}
+                className="text-white px-6 py-2 rounded mt-4 shadow-md hover:brightness-110 transition flex items-center gap-2"
+              >
+                <FontAwesomeIcon
+                  icon={faPaperPlane}
+                  style={{ width: "20px", height: "20px" }}
+                />
+                Meu Currículo
+              </button>
+            </a>
           </div>
         </div>
 
@@ -51,7 +60,7 @@ export default function Home() {
           id="container-mid"
           className="w-full p-30 mt-20 flex flex-col items-center"
         >
-          <h1 className="text-3xl font-bold text-center">Tecnologias</h1>
+          <h1 className="text-3xl font-bold text-center" id="tecdroid">Tecnologias</h1>
 
           <div className="flex justify-around w-full mt-10 gap-10">
             <div id="tecs" className="flex flex-col gap-10">
@@ -69,7 +78,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div id="tecs" className="flex flex-col gap-10 " >
+            <div id="tecs" className="flex flex-col gap-10 ">
               <Image
                 width={80}
                 height={80}
@@ -78,27 +87,28 @@ export default function Home() {
                 className="w-20 h-20 sm:w-24 sm:h-24 m-auto"
               />
               <p className="text-center text-lg">
-                Framework para React que permite renderização do lado do servidor
-                (SSR), geração de sites estáticos (SSG) e otimizações avançadas de
-                performance. Excelente para SEO e aplicações modernas.
+                Framework para React que permite renderização do lado do
+                servidor (SSR), geração de sites estáticos (SSG) e otimizações
+                avançadas de performance. Excelente para SEO e aplicações
+                modernas.
               </p>
-              </div>
-              <div id="tecs" className="flex flex-col gap-10 " >
-                <Image
-                  width={80}
-                  height={80}
-                  alt="TypeScript"
-                  src="/ts.png"
-                  className="w-20 h-20 sm:w-24 sm:h-24 m-auto"
-                />
-                <p className="text-center text-lg">
-                  Superset do JavaScript que adiciona tipagem estática ao código,
-                  ajudando a prevenir erros em tempo de desenvolvimento e
-                  proporcionando maior segurança e escalabilidade ao projeto.
-                </p>
-              </div>
-            
-            <div id="tecs" className="flex flex-col gap-10" >
+            </div>
+            <div id="tecs" className="flex flex-col gap-10 ">
+              <Image
+                width={80}
+                height={80}
+                alt="TypeScript"
+                src="/ts.png"
+                className="w-20 h-20 sm:w-24 sm:h-24 m-auto"
+              />
+              <p className="text-center text-lg">
+                Superset do JavaScript que adiciona tipagem estática ao código,
+                ajudando a prevenir erros em tempo de desenvolvimento e
+                proporcionando maior segurança e escalabilidade ao projeto.
+              </p>
+            </div>
+
+            <div id="tecs" className="flex flex-col gap-10">
               <Image
                 width={80}
                 height={80}
@@ -108,8 +118,8 @@ export default function Home() {
               />
               <p className="text-center text-lg">
                 Sistema de gerenciamento de banco de dados relacional. Utilizado
-                para armazenar, organizar e consultar dados estruturados de forma
-                eficiente, sendo amplamente adotado no mercado.
+                para armazenar, organizar e consultar dados estruturados de
+                forma eficiente, sendo amplamente adotado no mercado.
               </p>
             </div>
           </div>

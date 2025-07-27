@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@font-face {
+    font-family: droid;
+    src: url("/font/Android.ttf");
+}
+
 
 body{
     background-color: #0e1622;
@@ -22,3 +27,6 @@ body{
     padding: 10px;
 }
 
+#tecdroid{
+    font-family: droid;
+}
